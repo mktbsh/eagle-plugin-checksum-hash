@@ -4,5 +4,11 @@
   "editor.codeActionsOnSave": {
     "quickfix.biome": "explicit",
     "source.organizeImports.biome": "explicit"
-  }
+  },
+  "json.schemas": [
+    {
+      "fileMatch": ["/public/**/manifest.json"],
+      "url": "./schema/manifest.schema.json"
+    }
+  ]
 }
