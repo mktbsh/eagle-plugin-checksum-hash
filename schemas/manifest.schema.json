@@ -1,0 +1,123 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "plugin id"
+    },
+    "version": {
+      "type": "string",
+      "description": "plugin version",
+      "pattern": "(\\d+(?:\\.\\d+)*)$"
+    },
+    "platform": {
+      "type": "string",
+      "description": "supported platform"
+    },
+    "arch": {
+      "type": "string",
+      "description": "cpu architecture"
+    },
+    "name": {
+      "type": "string",
+      "description": "plugin name"
+    },
+    "logo": {
+      "type": "string",
+      "description": "plugin logo image path.\nsupports: png, jpg, webp"
+    },
+    "keywords": {
+      "type": "array",
+      "description": "plugin keywords for search",
+      "items": {
+        "type": "string"
+      }
+    },
+    "devTools": {
+      "type": "boolean",
+      "description": "debug",
+      "default": false
+    },
+    "main": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "entry page",
+          "default": "index.html"
+        },
+        "width": {
+          "type": "integer",
+          "description": "window width",
+          "default": "640"
+        },
+        "height": {
+          "type": "integer"
+        },
+        "minWidth": {
+          "type": "integer"
+        },
+        "minHeight": {
+          "type": "integer"
+        },
+        "maxWidth": {
+          "type": "integer"
+        },
+        "maxHeight": {
+          "type": "integer"
+        },
+        "alwaysOnTop": {
+          "type": "boolean",
+          "default": false
+        },
+        "frame": {
+          "type": "boolean",
+          "default": true
+        },
+        "fullscreenable": {
+          "type": "boolean",
+          "default": true
+        },
+        "maximizable": {
+          "type": "boolean",
+          "default": true
+        },
+        "minimizable": {
+          "type": "boolean",
+          "default": true
+        },
+        "resizable": {
+          "type": "boolean",
+          "default": true
+        },
+        "backgroundColor": {
+          "type": "string",
+          "default": "#FFF"
+        },
+        "multiple": {
+          "type": "boolean",
+          "default": false
+        },
+        "runAfterInstall": {
+          "type": "boolean",
+          "default": false
+        },
+        "shortcut": {
+          "type": "string"
+        }
+      },
+      "required": ["url", "width", "height"]
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "platform",
+    "arch",
+    "name",
+    "logo",
+    "keywords",
+    "devTools",
+    "main"
+  ]
+}
